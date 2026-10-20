@@ -1,0 +1,46 @@
+# Data sources. Checked live on 2026-10-20 unless marked TODO.
+
+japan:
+  estat_api: https://api.e-stat.go.jp/rest/3.0/app/json
+  stats_code: "00200573"                 # 消費者物価指数
+  cpi_2025_base: "0004052037"            # national + areas incl. Tokyo ward-area; data from 2025-01
+  cpi_2020_base: "0003427113"            # e-Stat notice cpi-info202107; provided through 2026-12
+  cpi_2015_base: "0003143513"            # fallback if the 2020-base table lacks 2017-19 item data
+  retail_price_survey:
+    stats_code: "00200571"               # 小売物価統計調査; 主要品目の都市別小売価格, monthly from 2000-01
+    stats_data_id: null                  # TODO: `python -m src.fetch.estat discover --stats-code 00200571`
+    # Item and city coverage was revised from 2025-01; charm-pricing features use 2017-2024 prices.
+  codelist_url: https://www.e-stat.go.jp/api/sites/default/files/2026-07/2025DBcode.xlsx
+  area:
+    national: "00000"
+    tokyo_ward_2025: "13100"
+    tokyo_ward_2020: "13A01"
+  # BOJ Corporate Goods Price Index (Producer Price Index, 2020 base) for cost controls.
+  cgpi:
+    api: https://www.stat-search.boj.or.jp/api/v1/getDataCode
+    db: PR01
+    start: "201501"
+    series:
+      all_commodities: PRCG20_2200000000
+      beverages_and_foods: PRCG20_2200120001   # linked back to 1960; used for both episodes
+      foods: PRCG20_2200130001                 # 2020 base only, from 2020-01
+
+singapore:
+  tablebuilder_api: https://tablebuilder.singstat.gov.sg/api/table/tabledata
+  cpi_monthly_2024_base: M213751         # 207 series; leaf items from 2015-01, back-linked to 2024 = 100
+  weights: null                          # deferred: Table Builder has no weights table and
+                                         # singstat.gov.sg blocks scripted PDF downloads. Category
+                                         # averages use equal weights; add release Table 1 by hand if needed.
+  page_limit: 5000                       # API pages by observation, not by series
+
+india:
+  mospi_api: https://api.mospi.gov.in/api
+  endpoints:
+    login: /login                        # POST {email, password} -> token (15 min)
+    item_index: /cpi/getItemIndex        # all-India item indices, base 2012, 2014-01..2025-12
+    group_index: /cpi/getCPIIndex        # group/subgroup indices
+  unauthenticated_record_limit: 10       # without a token the API returns only 10 records
+  wpi:                                   # OEA commodity WPI, base 2011-12 (869 rows incl. aggregates)
+    download_page: https://eaindustry.nic.in/download_data_1112.asp
+    # A 2022-23 = 100 series (957 items) also exists; 2011-12 is used because it spans
+    # both the pre-window (2023-08) and the GST 2.0 window without a base link.

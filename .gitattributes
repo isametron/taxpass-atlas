@@ -1,0 +1,10 @@
+*.py text eol=lf
+*.yaml text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+
+# Locked forecast artefacts are hashed byte-for-byte; never let git rewrite them.
+# These lines come last so they override the patterns above.
+forecasts/** -text
+config/japan_2027_protocol.yaml -text
+data/raw/MANIFEST.json -text

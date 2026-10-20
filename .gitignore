@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# TaxPass Atlas data: raw downloads and processed panels are rebuilt by the fetchers;
+# only the raw download manifest is committed.
+data/raw/**
+!data/raw/MANIFEST.json
+data/processed/

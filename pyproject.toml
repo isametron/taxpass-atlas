@@ -1,0 +1,30 @@
+[project]
+name = "taxpass-atlas"
+version = "0.1.0"
+description = "Item-level VAT/GST pass-through estimates for India GST 2.0, Japan 2019 and Singapore 2023-24, plus a locked forecast for Japan's April 2027 food tax cut."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "statsmodels>=0.14",
+    "pyarrow>=16",
+    "requests>=2.32",
+    "pyyaml>=6.0",
+    "matplotlib>=3.9",
+    "python-dotenv>=1.0",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
+    "truststore>=0.10",
+    "opentimestamps-client>=0.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

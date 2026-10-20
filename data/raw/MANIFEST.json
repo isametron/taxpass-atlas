@@ -1,0 +1,45 @@
+{
+  "data/raw/india/cpi_metadata.xlsx": {
+    "bytes": 34619,
+    "fetched_utc": "2026-10-19T21:46:23Z",
+    "params": {},
+    "sha256": "b241cee7548a98b2dfae9cf2419339e8efa6287318993d42226a15d5366faf7e",
+    "url": "https://api.mospi.gov.in/API/CPI%20Metadata.xlsx"
+  },
+  "data/raw/india/wpi_monthly_index_1112.xls": {
+    "bytes": 1339904,
+    "fetched_utc": "2026-10-20T16:18:21Z",
+    "params": {},
+    "sha256": "3265d404b82f5911660797d270a4f813e33b3aa48184dae234478b044bc91d59",
+    "url": "https://eaindustry.nic.in/indx_download_1112/monthly_index_202606.xls"
+  },
+  "data/raw/japan/2025DBcode.xlsx": {
+    "bytes": 59768,
+    "fetched_utc": "2026-10-19T21:43:34Z",
+    "params": {},
+    "sha256": "93e5516e6301b8f80ba40e0c4c6aca594b478be0a09526d58a71e03b3e9a6a9c",
+    "url": "https://www.e-stat.go.jp/api/sites/default/files/2026-07/2025DBcode.xlsx"
+  },
+  "data/raw/japan/boj_cgpi.json": {
+    "bytes": 7236,
+    "fetched_utc": "2026-10-20T16:16:56Z",
+    "params": {
+      "code": "PRCG20_2200000000,PRCG20_2200120001,PRCG20_2200130001",
+      "db": "PR01",
+      "format": "json",
+      "lang": "en",
+      "startDate": "201501"
+    },
+    "sha256": "085a8c920767690d9107aa6270aacb5e19e4799cf033d920a84a30be7dc5d231",
+    "url": "https://www.stat-search.boj.or.jp/api/v1/getDataCode"
+  },
+  "data/raw/singapore/M213751.json": {
+    "bytes": 857033,
+    "fetched_utc": "2026-10-19T21:43:23Z",
+    "params": {
+      "limit": 5000
+    },
+    "sha256": "cc44b1187b10fc92d18640fb60cefe0833ffcab50eda7195f23cc07086595ef8",
+    "url": "https://tablebuilder.singstat.gov.sg/api/table/tabledata/M213751"
+  }
+}

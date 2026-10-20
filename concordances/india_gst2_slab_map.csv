@@ -1,0 +1,300 @@
+item_code,item_desc,rate_old,rate_new,status,confidence,note
+1.1.01.1.1.01.P,rice – PDS,0,0,administered,high,PDS: administered price; loose rice nil N10/67
+1.1.01.1.1.02.X,rice – other sources,0,0,unchanged,high,loose nil N10/67; pre-packaged 5% N9 I/48 unchanged
+1.1.01.1.1.03.0,chira,0,0,unchanged,high,loose nil N10/98; pre-packaged 5% N9 I/121 unchanged
+1.1.01.1.1.05.0,muri,0,0,unchanged,high,loose nil N10/98; pre-packaged 5% N9 I/121 unchanged
+1.1.01.1.1.06.0,other rice products,0,0,unchanged,medium,rice flour etc.: loose nil N10/71; pre-packaged 5% N9 I/52; no change either way; mix unclear
+1.1.01.1.1.07.P,wheat/ atta – PDS,0,0,administered,high,"PDS: administered price; loose wheat/atta nil N10/62,70"
+1.1.01.1.1.08.X,wheat/ atta – other sources,0,0,unchanged,high,"loose nil N10/62,70; pre-packaged 5% N9 I/43,51 unchanged"
+1.1.01.1.1.09.0,maida,0,0,unchanged,high,wheat flour 1101: loose nil N10/70; pre-packaged 5% N9 I/51 unchanged
+1.1.01.1.1.10.0,"suji, rawa",0,0,unchanged,high,groats incl. suji 1103: loose nil N10/72; pre-packaged 5% N9 I/53 unchanged
+1.1.01.1.1.11.X,"sewai, noodles",12,5,cut,high,pasta/noodles/seviyan 1902 N9 I/119; A-I:1902 12->5
+1.1.01.1.1.12.0,bread (bakery),0,0,unchanged,high,bread nil N10/100 (already exempt; excluded from A-I:1905 cut)
+1.1.01.1.1.13.X,"biscuits, chocolates, etc.",18,5,cut,high,"biscuits 1905 N9 I/123, chocolates 1806 N9 I/116; A-I:1905 and A-I:1806 18->5"
+1.1.01.1.1.15.0,other cereals,0,0,unchanged,medium,loose cereals nil N10/63-69; pre-packaged 5% N9 I/44-50 unchanged; mix unclear
+1.1.01.1.1.16.0,"cereal substitutes: tapioca, etc.",0,0,unchanged,high,fresh tapioca nil N10/40; sabudana 5% N9 I/120 unchanged
+1.1.01.2.1.01.X,jowar & its products,0,0,unchanged,high,loose nil N10/68-69; pre-packaged 5% N9 I/49-50 unchanged
+1.1.01.2.1.02.X,bajra & its products,0,0,unchanged,high,loose nil N10/69; pre-packaged 5% N9 I/50 unchanged
+1.1.01.2.1.03.X,maize & products,0,0,unchanged,high,"loose nil N10/66,71; pre-packaged 5% N9 I/47,52 unchanged"
+1.1.01.2.1.05.X,small millets & their products,0,0,unchanged,high,loose nil N10/69; pre-packaged 5% N9 I/50 unchanged
+1.1.01.2.1.06.X,ragi & its products,0,0,unchanged,high,loose nil N10/69; pre-packaged 5% N9 I/50 unchanged
+1.1.01.3.2.01.0,grinding charges,0,0,unchanged,low,service; mostly unregistered; no change in 15/2025
+1.1.02.1.1.01.0,goat meat/mutton,0,0,unchanged,high,fresh meat nil N10/8
+1.1.02.1.1.02.X,beef/ buffalo meat,0,0,unchanged,high,fresh bovine meat nil N10/7
+1.1.02.1.1.03.0,pork,0,0,unchanged,high,fresh meat nil N10/8
+1.1.02.1.1.04.0,chicken,0,0,unchanged,high,fresh poultry meat nil N10/8
+1.1.02.1.1.05.0,"others: birds, crab, oyster, tortoise, etc.",0,0,unchanged,high,fresh birds nil N10/8; fresh crustaceans/molluscs nil N10/13
+1.1.02.2.1.01.X,"fish, prawn",0,0,unchanged,high,fresh fish nil N10/12; fresh prawn nil N10/13; frozen pre-packaged 5% N9 I/3 unchanged
+1.1.03.1.1.01.0,eggs (no.),0,0,unchanged,high,eggs in shell nil N10/18
+1.1.04.1.1.01.X,milk: liquid (litre),0,0,unchanged,medium,fresh milk nil N10/15; UHT 5->0 (A-I:0401) is a small share
+1.1.04.2.1.01.0,baby food,18,5,cut,high,infant food preparations 1901 N9 I/118; A-I:1901 18->5
+1.1.04.2.1.02.X,milk: condensed/ powder,12,5,mixed,low,condensed milk 12->5 (A-I:0402 91 10); milk powder 5% unchanged; both N9 I/4
+1.1.04.2.1.03.0,curd,0,0,unchanged,high,loose curd nil N10/16; pre-packaged 5% N9 I/5 unchanged
+1.1.04.2.1.04.0,other milk products,12,5,mixed,low,"paneer 5->0 (N10/17), cheese 12->5 (N9 I/8; A-I:0406); khoa/lassi unchanged"
+1.1.05.1.1.01.0,mustard oil,5,5,unchanged,high,mustard oil 1514 N9 I/91; not in A-I
+1.1.05.1.1.02.0,groundnut oil,5,5,unchanged,high,groundnut oil 1508 N9 I/85; not in A-I
+1.1.05.1.1.03.0,coconut oil,5,5,unchanged,high,coconut oil 1513 N9 I/90; not in A-I (hair-oil packs 3305 18->5 are separate)
+1.1.05.1.1.04.0,"refined oil [sunflower, soyabean, saffola, etc.]",5,5,unchanged,high,"soya/sunflower oils 1507,1512 N9 I/84,89; not in A-I"
+1.1.05.2.1.01.0,ghee,12,5,cut,high,ghee 0405 N9 I/7; A-I:0405 12->5
+1.1.05.2.1.02.0,butter,12,5,cut,high,butter 0405 N9 I/7; A-I:0405 12->5
+1.1.05.2.1.03.0,"vanaspati, margarine",5,5,unchanged,medium,vanaspati 1516 5% N9 I/93 unchanged; margarine 18->5 (A-I:1517 10) is a small share
+1.1.06.1.1.01.0,banana (no.),0,0,unchanged,high,fresh bananas nil N10/46
+1.1.06.1.1.02.0,jackfruit,0,0,unchanged,high,fresh fruit nil N10/53
+1.1.06.1.1.03.0,watermelon,0,0,unchanged,high,fresh melons nil N10/50
+1.1.06.1.1.04.0,pineapple (no.),0,0,unchanged,high,fresh pineapples nil N10/47
+1.1.06.1.1.05.0,coconut (no.),0,0,unchanged,high,coconuts fresh or dried nil N10/43
+1.1.06.1.1.06.0,green coconut (no.),0,0,unchanged,high,fresh coconuts nil N10/43
+1.1.06.1.1.07.0,guava,0,0,unchanged,high,fresh guavas nil N10/47
+1.1.06.1.1.08.0,singara,0,0,unchanged,high,fresh fruit nil N10/53
+1.1.06.1.1.09.X,"orange, mausami (no.)",0,0,unchanged,high,fresh citrus nil N10/48
+1.1.06.1.1.10.0,papaya,0,0,unchanged,high,fresh papayas nil N10/50
+1.1.06.1.1.11.0,mango,0,0,unchanged,high,fresh mangoes nil N10/47
+1.1.06.1.1.12.0,kharbooza,0,0,unchanged,high,fresh melons nil N10/50
+1.1.06.1.1.13.X,pears/nashpati,0,0,unchanged,high,fresh pears nil N10/51
+1.1.06.1.1.14.0,berries,0,0,unchanged,high,fresh berries nil N10/53
+1.1.06.1.1.15.0,leechi,0,0,unchanged,high,fresh lichi nil N10/53
+1.1.06.1.1.16.0,apple,0,0,unchanged,high,fresh apples nil N10/51
+1.1.06.1.1.17.0,grapes,0,0,unchanged,high,fresh grapes nil N10/49
+1.1.06.1.1.18.0,other fresh fruits,0,0,unchanged,high,fresh fruit nil N10/47-53
+1.1.06.2.1.01.0,coconut: copra,5,5,unchanged,high,copra 1203 5% N9 I/63; dried coconut nil N10/43; no change either way
+1.1.06.2.1.02.0,groundnut,5,5,unchanged,high,raw groundnuts 1202 5% N9 I/62 (was 0 in draft); roasted 2008 12->5 is minor
+1.1.06.2.1.03.0,dates,12,5,cut,high,dried dates 0804 N9 I/26; A-I:0804 12->5
+1.1.06.2.1.04.0,cashewnut,5,5,unchanged,high,cashew 0801 5% N9 I/22; not in A-I; roasted/salted 2008 12->5 is minor
+1.1.06.2.1.05.0,walnut,5,5,unchanged,high,walnuts 0802 5% N9 I/23; walnuts not in A-I:0802 cut list
+1.1.06.2.1.06.0,other nuts,12,5,cut,high,almonds/pistachios dried 0802 N9 I/23; A-I:0802 12->5
+1.1.06.2.1.07.X,"raisin, kishmish, monacca, etc.",5,5,unchanged,high,raisins 0806 5% N9 I/28; not in A-I
+1.1.06.2.1.08.0,other dry fruits,12,5,cut,medium,"dried fruit 0813 N9 I/31, figs 0804 N9 I/26; A-I 12->5; makhana 5% unchanged"
+1.1.07.1.1.01.0,potato,0,0,unchanged,high,fresh potatoes nil N10/27
+1.1.07.1.1.02.0,onion,0,0,unchanged,high,fresh onions nil N10/29
+1.1.07.1.1.03.0,radish,0,0,unchanged,high,fresh radishes nil N10/32
+1.1.07.1.1.04.0,carrot,0,0,unchanged,high,fresh carrots nil N10/32
+1.1.07.1.1.05.0,garlic (gm),0,0,unchanged,high,fresh garlic nil N10/29
+1.1.07.1.1.06.0,ginger (gm),0,0,unchanged,high,fresh ginger nil N10/60
+1.1.07.2.1.01.X,palak/other leafy vegetables,0,0,unchanged,high,fresh vegetables nil N10/35
+1.1.07.3.1.01.0,tomato,0,0,unchanged,high,fresh tomatoes nil N10/28
+1.1.07.3.1.02.0,brinjal,0,0,unchanged,high,fresh vegetables nil N10/35
+1.1.07.3.1.03.0,cauliflower,0,0,unchanged,high,fresh brassicas nil N10/30
+1.1.07.3.1.04.0,cabbage,0,0,unchanged,high,fresh brassicas nil N10/30
+1.1.07.3.1.05.0,green chillies,0,0,unchanged,high,fresh vegetables nil N10/35
+1.1.07.3.1.06.0,lady's finger,0,0,unchanged,high,fresh vegetables nil N10/35
+1.1.07.3.1.07.X,"parwal/patal, kundru",0,0,unchanged,high,fresh vegetables nil N10/35
+1.1.07.3.1.08.X,"gourd, pumpkin",0,0,unchanged,high,fresh vegetables nil N10/35
+1.1.07.3.1.09.0,peas,0,0,unchanged,high,fresh leguminous vegetables nil N10/34
+1.1.07.3.1.10.X,"beans, barbati",0,0,unchanged,high,fresh leguminous vegetables nil N10/34
+1.1.07.3.1.11.0,lemon (no.),0,0,unchanged,high,fresh lemons nil N10/48
+1.1.07.3.1.12.X,other vegetables,0,0,unchanged,high,fresh vegetables nil N10/27-35
+1.1.07.4.1.01.0,pickles (gm),12,5,cut,high,pickles 2001 N9 I/125; A-I:2001 12->5
+1.1.07.4.1.02.0,chips (gm),12,5,cut,high,potato chips 2005 N9 I/129; extruded snacks 1905 90 30 N9 I/123; A-I 12->5
+1.1.08.1.1.01.0,"arhar, tur",0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.02.0,gram: split,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.03.0,gram: whole,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.04.0,moong,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.05.0,masur,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.06.0,urd,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.07.0,peas,0,0,unchanged,high,loose dried peas nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.08.0,khesari,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.1.1.09.X,other pulses,0,0,unchanged,high,loose pulses nil N10/39; pre-packaged 5% N9 I/20 unchanged
+1.1.08.2.1.01.0,gram products,0,0,unchanged,medium,sattu nil N10/75; roasted gram 5% N9 I/142 (excluded from A-I:2106 90 cut); no change
+1.1.08.2.1.02.0,besan,0,0,unchanged,high,pulse flour: loose nil N10/75; pre-packaged 5% N9 I/56 unchanged
+1.1.08.2.1.03.0,other pulse products,0,0,unchanged,medium,mostly loose pulse flour/dal products nil N10/75; bari/mungodi 12->5 (A-I:2106) a subset
+1.1.09.1.1.01.P,sugar - PDS,5,5,administered,high,PDS; sugar 1701 5% N9 I/105
+1.1.09.1.1.02.0,sugar - other sources,5,5,unchanged,high,sugar 1701 5% N9 I/105; A-I:1701 91/99 12->5 covers only flavoured sugar and cubes
+1.1.09.1.1.03.0,gur,0,0,unchanged,high,loose jaggery nil N10/96; pre-packaged 5% N9 I/106 unchanged
+1.1.09.2.1.01.0,"candy, misri",18,5,mixed,low,sugar confectionery 18->5 (A-I:1704; N9 I/110); misri 5% unchanged (N9 I/107)
+1.1.09.2.1.02.0,honey,5,5,unchanged,high,pre-packaged honey 5% N9 I/10; loose nil N10/19; not in A-I
+1.1.09.2.1.03.X,"sauce, jam, jelly (gm)",12,5,cut,high,"sauces 2103 N9 I/139, jams 2007 N9 I/131; A-I 12->5"
+1.1.09.3.1.01.0,ice-cream,18,5,cut,high,ice cream 2105 N9 I/141; A-I:2105 18->5
+1.1.10.1.1.01.0,salt,0,0,unchanged,high,salt nil N10/109
+1.1.10.1.1.02.0,jeera (gm),5,5,unchanged,high,cumin 0909 5% N9 I/41; not in A-I
+1.1.10.1.1.03.0,dhania (gm),5,5,unchanged,high,coriander 0909 5% N9 I/41; not in A-I
+1.1.10.1.1.04.0,turmeric (gm),5,5,unchanged,high,dried turmeric 0910 5% N9 I/42; fresh nil N10/61
+1.1.10.1.1.05.0,black pepper (gm),5,5,unchanged,high,pepper 0904 5% N9 I/36; not in A-I
+1.1.10.1.1.06.0,dry chillies (gm),5,5,unchanged,high,dried capsicum 0904 5% N9 I/36; not in A-I
+1.1.10.1.1.07.0,tamarind (gm),0,0,unchanged,high,dried tamarind nil N10/54 (was 5 in draft)
+1.1.10.1.1.08.0,curry powder (gm),5,5,mixed,low,spice mixtures 0910 5% unchanged (N9 I/42) vs mixed condiments 2103 12->5 (A-I:2103); classification varies
+1.1.10.1.1.09.0,oilseeds (gm),5,5,unchanged,high,oil seeds 1207 5% N9 I/67; not in A-I
+1.1.12.1.1.01.0,tea: cups (no.),5,5,unchanged,medium,"restaurant 5% (11/2017 S.No.7(ii), not amended by 15/2025); vendors mostly unregistered"
+1.1.12.1.1.02.0,coffee: cups (no.),5,5,unchanged,medium,"restaurant 5% (11/2017 S.No.7(ii), not amended by 15/2025); vendors mostly unregistered"
+1.1.12.2.1.01.0,cooked meals purchased  (no.),5,5,unchanged,high,"restaurant 5% (11/2017 S.No.7(ii), not amended by 15/2025)"
+1.1.12.3.1.01.X,"cooked snacks purchased [samosa, puri, paratha, burger, chowmein, idli, dosa, vada, chops, pakoras, pao bhaji, etc.]",5,5,unchanged,high,"restaurant 5% (11/2017 S.No.7(ii), not amended by 15/2025)"
+1.1.12.3.1.03.X,"prepared sweets, cake, pastry",5,5,mixed,low,sweetmeats 5% unchanged (N9 I/142); cakes/pastries 18->5 (A-I:1905)
+1.1.12.3.1.04.0,"papad, bhujia, namkeen, mixture, chanachur",12,5,mixed,low,packaged namkeen 12->5 (A-I:2106 90; N9 I/143); loose namkeen was already 5%; papad nil N10/99
+1.1.12.3.1.05.0,other packaged processed food,12,5,cut,low,"mix of 12->5 and 18->5 cuts (A-I:1904, 2104, 2106); weights unknown"
+1.2.11.1.1.01.0,tea: leaf (gm),5,5,unchanged,high,tea 0902 5% N9 I/34; not in A-I
+1.2.11.1.1.02.0,coffee: powder (gm),18,5,mixed,low,instant coffee 18->5 (A-I:2101 11; N9 I/135); roasted coffee 5% unchanged (N9 I/33)
+1.2.11.2.1.01.0,mineral water (litre),18,5,cut,high,packaged water 2201 N9 I/146; A-I:2201 18->5 (20 L jars 12->5)
+1.2.11.2.1.02.X,cold beverages: bottled/canned (litre),40,40,mixed,low,"aerated 28%+12% cess -> 40% no cess (N9 III/1; CC2/25), so no change; fruit-pulp drinks 12->5 (A-I:2202 99 20)"
+1.2.11.2.1.03.X,fruit juice and shake (litre),12,5,cut,high,"juices 2009 N9 I/133, fruit drinks 2202 99 20 N9 I/150, milk drinks N9 I/151; A-I 12->5"
+1.2.11.2.1.04.X,"other beverages: cocoa, chocolate, etc.",18,5,cut,high,"cocoa powder 1805 N9 I/115, chocolate 1806 N9 I/116, malt drinks 1901 N9 I/118; A-I 18->5"
+2.1.01.1.1.01.0,country liquor (litre),0,0,exempt,high,alcoholic liquor for human consumption outside GST
+2.1.01.1.1.02.0,foreign/refined liquor or wine (litre),0,0,exempt,high,alcoholic liquor for human consumption outside GST
+2.1.01.1.1.03.0,toddy (litre),0,0,exempt,high,alcoholic toddy outside GST (non-alcoholic toddy nil N10/104)
+2.1.01.1.1.04.0,beer (litre),0,0,exempt,high,alcoholic liquor for human consumption outside GST
+2.1.01.1.1.05.0,other intoxicants,0,0,exempt,high,alcoholic liquor for human consumption outside GST
+2.1.01.2.1.01.0,pan: leaf (no.),0,0,unchanged,high,betel leaves nil N10/93
+2.1.01.2.1.02.0,pan: finished (no.),0,0,unchanged,low,prepared pan; mostly unregistered sellers; review
+2.1.01.2.1.03.X,ingredients for pan (gm),5,5,mixed,low,areca 5% unchanged (N9 I/23); katha 18->5 (A-I:1404 90 50); pan masala 28%+cess unchanged
+2.1.01.3.1.01.0,bidi (no.),28,28,unchanged,low,biris 28% N9 VII/4; A-I:2403 cut to 18 deferred until cess loans repaid (PIB 03.09.2025); excluded: possible early price moves ahead of 40%
+2.1.01.3.1.02.X,cigarettes (no.),28,28,unchanged,low,N9 VII/3; rate and cess unchanged on 22.09.2025 (40% deferred); not administered; excluded: possible early price moves ahead of 40%
+2.1.01.3.1.03.0,leaf tobacco (gm),28,28,unchanged,low,unmanufactured tobacco 28% N9 VII/2 (tobacco leaves 5% N9 I/162); unchanged either way; excluded: possible early price moves ahead of 40%
+2.1.01.3.1.04.0,snuff (gm),28,28,unchanged,low,N9 VII/4; rate and cess unchanged on 22.09.2025 (40% deferred); excluded: possible early price moves ahead of 40%
+2.1.01.3.1.05.0,hookah tobacco (gm),28,28,unchanged,low,N9 VII/4; rate and cess unchanged on 22.09.2025 (40% deferred); excluded: possible early price moves ahead of 40%
+2.1.01.3.1.06.0,cheroot (no.),28,28,unchanged,low,N9 VII/3; rate and cess unchanged on 22.09.2025 (40% deferred); excluded: possible early price moves ahead of 40%
+2.1.01.3.1.07.0,"zarda, kimam, surti (gm)",28,28,unchanged,low,N9 VII/4; rate and cess unchanged on 22.09.2025 (40% deferred); excluded: possible early price moves ahead of 40%
+2.1.01.3.1.08.0,other tobacco products,28,28,unchanged,low,N9 VII/2-6; rate and cess unchanged on 22.09.2025 (40% deferred); excluded: possible early price moves ahead of 40%
+3.1.01.1.1.01.0,dhoti (no.),12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.02.0,saree (no.),12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.03.X,"shawl, chaddar (no.)",12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198); handmade shawls 12->5 (A-I:6117)"
+3.1.01.1.1.04.0,lungi (no.),12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.05.0,kurta-pajama suits: males (no.),12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.06.X,"shirts, T-shirts (no.)",12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.07.X,"shorts, trousers, bermudas (no.)",12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.08.X,"baniyan, socks, other hosiery and undergarments, etc.(no.)",12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.09.0,kurta-pajama suits: females (no.),12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.10.0,"frocks, skirts, etc. (no.)",12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.13.0,school/college uniform: boys,12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.1.1.14.0,school/college uniform: girls,12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.2.1.01.X,"coat, jacket, sweater, windcheater (no.)",12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.2.1.02.0,knitting wool (gm),5,5,unchanged,high,wool yarn 5106-5110 5% N9 I/329; not in A-I
+3.1.01.3.1.03.X,"cloth for shirt, pyjama, kurta, salwar, etc. (metre)",5,5,unchanged,high,"woven fabrics 5% N9 I/334 (cotton), I/342,348 (man-made); not in A-I"
+3.1.01.3.1.04.X,"cloth for coat, trousers, suit, etc. (metre)",5,5,unchanged,high,"woven fabrics 5% N9 I/330 (wool), I/342,348 (man-made); not in A-I"
+3.1.01.3.1.06.0,clothing (first-hand): other,12,5,mixed,low,"price-dependent: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/388-389, II/197-198)"
+3.1.01.3.1.07.0,clothing: second-hand,5,5,unchanged,medium,worn clothing 6309 5% N9 I/391 (was 0 in draft); much of trade informal
+3.1.01.3.1.08.X,"gamchha, towel, handkerchief (no.)",12,5,mixed,low,"price-dependent made-ups: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/390, II/199); handkerchiefs follow apparel slabs"
+3.1.01.3.1.09.X,"headwear, belts, ties (no.)",12,5,mixed,low,"textile caps/hats 12->5 (A-I:6501,6505); leather belts 18 unchanged (N9 II/146); ties follow apparel slabs"
+3.1.01.4.2.01.X,"washerman, laundry, ironing",0,0,unchanged,low,service; mostly unregistered; no change in 15/2025
+3.1.01.4.2.02.X,tailor,0,0,unchanged,low,service; mostly unregistered; no change in 15/2025
+3.1.02.1.1.01.X,"leather boots, shoes",12,5,mixed,low,"price-dependent: <=Rs1000 12->5, Rs1000-2500 18->5, >Rs2500 18->18 (N9 I/392, II/202-206; A-I:64)"
+3.1.02.1.1.02.X,"leather sandals, chappals, etc.",12,5,mixed,low,"price-dependent: <=Rs1000 12->5, Rs1000-2500 18->5, >Rs2500 18->18 (N9 I/392, II/202-206; A-I:64)"
+3.1.02.1.1.03.0,other leather footwear,12,5,mixed,low,"price-dependent: <=Rs1000 12->5, Rs1000-2500 18->5, >Rs2500 18->18 (N9 I/392, II/202-206; A-I:64)"
+3.1.02.1.1.04.X,rubber / PVC footwear,12,5,cut,medium,footwear <=Rs2500 12->5 (A-I:64; N9 I/392); was 5->5 in draft; assumes nearly all pairs <=Rs1000
+3.1.02.1.1.05.0,other footwear,12,5,mixed,low,"price-dependent: <=Rs1000 12->5, Rs1000-2500 18->5, >Rs2500 18->18 (N9 I/392, II/202-206; A-I:64)"
+4.1.01.1.2.01.X,"house rent, garage rent (actual)",0,0,exempt,high,residential rent exempt (12/2017-CTR); not changed by 15/2025
+4.1.01.2.2.01.X,residential building & land (cost of repairs only),28,18,mixed,low,cement 28->18 (A-I:2523; N9 II/9); paints 18 unchanged; labour; excluded
+4.1.01.2.2.02.X,water charges,0,0,administered,high,water tariff; non-packaged water nil N10/103
+4.1.01.2.2.03.0,watch man charges (other cons taxes),0,0,unchanged,low,labour service; mostly outside GST
+5.1.01.1.1.01.0,electricity (std. unit),0,0,administered,high,electrical energy nil N10/111; administered tariff
+5.1.01.2.1.01.X,LPG [excl. conveyance],5,5,administered,high,domestic LPG 5% N9 I/209; administered price
+5.1.01.3.1.01.P,kerosene – PDS (litre),5,5,administered,high,kerosene PDS 5% N9 I/207 (was 0 in draft); administered price
+5.1.01.3.1.02.0,kerosene – other sources (litre),18,18,unchanged,medium,"non-PDS kerosene 18% N9 II/29 (only petrol, diesel, ATF, crude are outside GST); was 0 administered in draft"
+5.1.01.3.1.04.0,diesel (litre) [excl. conveyance],0,0,administered,high,diesel outside GST (N9 II/29 carve-out)
+5.1.01.3.1.05.0,other fuel,0,0,unchanged,low,unspecified; review
+5.1.01.4.1.01.0,coke,5,5,unchanged,high,coke of coal 2704 5% N9 I/205; not in A-I (only 2701-2703 hiked); was 5->18 in draft
+5.1.01.4.1.02.0,firewood and chips,0,0,unchanged,high,firewood nil N10/122
+5.1.01.4.1.03.0,coal,5,18,hike,medium,coal 2701 N9 II/23; A-I:2701 5->18; Rs400/t cess removed (CC2/25) so effective hike is smaller
+5.1.01.4.1.04.0,charcoal,0,0,unchanged,high,wood charcoal nil N10/123 (was 5 in draft); not in A-I
+5.1.01.4.1.05.0,dung cake,0,0,unchanged,medium,dung as manure nil N10/116; as fuel mostly non-market
+6.1.01.1.1.01.0,bedstead,18,18,unchanged,high,furniture 9403 18% N9 II/612; only bamboo/cane furniture cut (A-I:9403)
+6.1.01.1.1.02.0,"almirah, dressing table",18,18,unchanged,high,furniture 9403 18% N9 II/612; not in A-I
+6.1.01.1.1.03.X,"chair, stool, bench, table",18,18,unchanged,high,"seats 9401 N9 II/610, furniture 9403 N9 II/612 at 18%; not in A-I"
+6.1.01.1.1.06.0,"other furniture & fixtures (couch, sofa, etc.)",18,18,unchanged,high,"seats 9401 N9 II/610, furniture 9403 N9 II/612 at 18%; not in A-I"
+6.1.01.1.1.07.0,bathroom and sanitary equipment,18,18,unchanged,high,"sanitary ware 3922, 6910, 7324 at 18% N9 II/123,240,303; not in A-I"
+6.1.01.1.1.09.X,"carpet, daree & other floor mattings",12,5,cut,medium,carpets 5701-5705 N9 I/358-362; A-I 12->5; handloom durries already 5% (N9 I/363)
+6.1.01.2.1.01.0,"bed sheet, bed cover (no.)",12,5,mixed,low,"price-dependent made-ups: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/390, II/199)"
+6.1.01.2.1.02.0,"rug, blanket (no.)",12,5,mixed,low,"price-dependent made-ups: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/390, II/199)"
+6.1.01.2.1.03.X,"pillow, quilt, mattress (no.)",18,18,mixed,low,mattresses/pillows 9404 18% unchanged (N9 II/613); cotton quilts follow made-up slabs (N9 I/493)
+6.1.01.2.1.04.X,"cloth for upholstery, curtains, tablecloth, etc. (metre)",5,5,unchanged,medium,"cloth by the metre: woven fabrics 5% N9 I/334,342,348 unchanged"
+6.1.01.2.1.05.0,mosquito net (no.),5,5,mixed,low,mosquito nets fall under made-up slabs (N9 I/390); no separate 12% entry (draft 12->5 unsupported)
+6.1.01.2.1.06.X,bedding: others,12,5,mixed,low,"price-dependent made-ups: <=Rs1000 5->5, Rs1000-2500 12->5, >Rs2500 12->18 (N9 I/390, II/199)"
+6.1.01.3.1.01.X,"air conditioner, air cooler",28,18,mixed,low,AC 28->18 (A-I:8415; N9 II/404); air coolers 8479 18% unchanged (N9 II/464)
+6.1.01.3.1.02.0,inverter,18,18,unchanged,medium,static converters 8504 18% N9 II/477; inverter batteries 8507 28->18 (A-I:8507) not included
+6.1.01.3.1.03.0,sewing machine,12,5,cut,high,sewing machines 8452 N9 I/435; A-I:8452 12->5
+6.1.01.3.1.04.0,washing machine,18,18,unchanged,high,washing machines 8450 18% N9 II/437; not in A-I
+6.1.01.3.1.05.X,"stove, gas burner",18,18,mixed,low,LPG stoves 7321 18% unchanged (N9 II/299); kerosene/wood stoves 12->5 (A-I:7321)
+6.1.01.3.1.06.0,refrigerator,18,18,unchanged,high,refrigerators 8418 18% N9 II/407; not in A-I
+6.1.01.3.1.07.0,electric fan,18,18,unchanged,high,fans 8414 18% N9 II/401; not in A-I
+6.1.01.3.1.08.0,water purifier,18,18,unchanged,high,water filters 8421 18% N9 II/410; not in A-I
+6.1.01.3.1.09.X,"electric iron, heater, toaster, oven & other electric heating appliances",18,18,unchanged,high,electro-thermic appliances 8516 18% N9 II/489; not in A-I
+6.1.01.3.1.10.0,other cooking/ household appliances,18,18,unchanged,medium,mixers etc. 8509 18% N9 II/482; dishwashers 28->18 (A-I:8422) a small share
+6.1.01.3.1.12.0,other durables (specify)….,18,18,mixed,low,unspecified
+6.1.01.4.1.01.X,stainless steel utensils,12,5,cut,high,steel utensils 7323 N9 I/416; A-I:7323 12->5
+6.1.01.4.1.02.0,pressure cooker/ pressure pan,12,5,cut,high,"kitchen articles 7323/7615 N9 I/416,419; A-I 12->5"
+6.1.01.4.1.03.0,other metal utensils,12,5,cut,high,"copper/aluminium utensils 7418, 7615 N9 I/417,419; A-I 12->5"
+6.1.01.4.1.05.0,other crockery & utensils,12,5,mixed,low,"ceramic tableware 12->5 (A-I:6911,6912); plastic tableware 3924 18 unchanged (N9 II/125)"
+6.1.01.4.1.06.0,earthenware,0,0,unchanged,medium,earthen pots and clay lamps nil N10/151 (was 5 in draft); terracotta tableware 12->5 a subset
+6.1.01.4.1.07.0,glassware,18,18,unchanged,high,glassware 7013 18% N9 II/252; not in A-I (draft 12->5 wrong)
+6.1.01.5.1.01.X,"electric bulb, tubelight",18,18,unchanged,low,new rate 18% (lamps 8539 N9 II/511; luminaires 9405 N9 II/614); old LED rate not verified; review
+6.1.01.5.1.02.0,"plugs, switches & other electrical fittings",18,18,unchanged,high,switches/plugs 8536 18% N9 II/508; not in A-I
+6.1.01.5.1.03.0,electric batteries,18,18,unchanged,medium,"dry cells 8506 18% N9 II/479, not in A-I; lead-acid 8507 28->18 (A-I:8507) not household cells"
+6.1.01.5.1.04.0,torch,18,18,unchanged,high,portable lamps 8513 18% N9 II/486; not in A-I
+6.1.01.5.1.05.0,lock,18,18,unchanged,high,locks 8301 18% N9 II/376; not in A-I
+6.1.01.6.1.01.X,"bucket, water bottle/ feeding bottle & other  plastic goods",18,18,mixed,low,plastic household articles 3924 18% unchanged (N9 II/125); feeding bottles 12->5 (A-I:3926)
+6.1.01.6.1.02.0,"coir, rope, etc.",12,5,cut,medium,ropes and cordage 5607 N9 I/355; A-I:5607 12->5; coir products already 5%
+6.1.01.6.1.03.0,washing soap/soda/powder,18,18,unchanged,high,"laundry soap 3401 N9 II/66, detergents 3402 N9 II/67 at 18%; not in A-I"
+6.1.01.6.1.04.0,other washing requisites,18,18,unchanged,low,"polishes/cleaners 3402, 3405 18% N9 II/67,70; composition unclear"
+6.1.01.6.1.05.X,"incense (agarbatti), room freshener",5,5,unchanged,medium,agarbatti 5% N9 I/250; room fresheners 18% unchanged (N9 II/64); other burning items 12->18 minor
+6.1.01.6.1.06.0,flower (fresh): all purposes,0,0,unchanged,high,cut flowers nil N10/26
+6.1.01.6.1.07.0,"mosquito repellent, insecticide, acid etc.",18,18,unchanged,high,insecticides 3808 18% N9 II/95; not in A-I
+6.1.01.6.1.08.0,matches (box),12,5,cut,high,safety matches 3605 00 10 N9 I/256; A-I 12->5
+6.1.01.6.1.09.0,candle (no.),12,5,cut,high,candles 3406 N9 I/253; A-I:3406 12->5
+6.1.01.6.1.10.0,other petty articles,18,18,mixed,low,unspecified
+6.1.01.7.2.01.X,domestic servant/cook,0,0,exempt,high,"employment, not a supply"
+6.1.01.7.2.03.0,sweeper,0,0,exempt,high,"employment, not a supply"
+6.1.01.7.2.05.0,Monthly Maintainance charges,18,18,unchanged,low,"RWA charges 18% above Rs7500/month per member, exempt below; not changed by 15/2025"
+6.1.01.7.2.07.X,other consumer services excluding conveyance,18,18,mixed,low,unspecified
+6.1.02.1.2.05.X,hospital & nursing home charges,0,0,exempt,high,healthcare services exempt (12/2017-CTR); not changed by 15/2025
+6.1.02.2.1.01.X,medicine (non-institutional),12,5,cut,medium,medicaments 3003/3004 N9 I/233-234; A-I 12->5; some already 5% or now nil (N10/113)
+6.1.02.2.1.03.X,family planning devices,0,0,unchanged,high,"contraceptives nil N10/115,120"
+6.1.02.2.1.04.0,spectacles,12,5,cut,high,"spectacles 9004 N9 I/482, lenses I/480, frames I/481; A-I 12->5"
+6.1.02.2.2.06.0,other medical expenses (non-institutional),12,5,mixed,low,unspecified medical goods and services
+6.1.02.2.2.07.0,doctor’s/ surgeon’s fee-first consultation (non-institutional),0,0,exempt,high,healthcare services exempt (12/2017-CTR); not changed by 15/2025
+6.1.02.2.2.08.X,"X-ray, ECG, pathological test, etc. (non-institutional)",0,0,exempt,high,healthcare services exempt (12/2017-CTR); not changed by 15/2025
+6.1.03.1.1.01.0,"motor car, jeep",29,18,mixed,low,small cars 28%+1-3% cess -> 18 (N9 II/534-535); larger cars 28%+15-22% cess -> 40 (N9 III/5; CC2/25)
+6.1.03.1.1.02.X,"motor cycle, scooter",28,18,cut,high,motorcycles <=350cc 8711 N9 II/546; A-I:8711 28->18 (>350cc 28%+3% cess -> 40 a small share)
+6.1.03.1.1.03.0,bicycle(without  accessories),12,5,cut,high,bicycles 8712 N9 I/456; A-I:8712 12->5
+6.1.03.1.1.05.X,tyres & tubes,28,18,cut,medium,vehicle tyres 4011 N9 II/137; A-I:4011 28->18; tubes and bicycle tyres not in A-I
+6.1.03.2.1.01.0,petrol for vehicle,0,0,administered,high,petrol outside GST (N9 II/29 carve-out)
+6.1.03.2.1.02.0,diesel for vehicle,0,0,administered,high,diesel outside GST (N9 II/29 carve-out)
+6.1.03.2.1.03.X,lubricants & other fuels for vehicle,18,18,unchanged,high,"lubricating oils 2710 N9 II/29, preparations 3403 N9 II/68 at 18%; not in A-I"
+6.1.03.2.2.04.0,other conveyance expenses,18,18,mixed,low,unspecified
+6.1.03.3.2.01.X,railway fare,5,5,administered,high,"rail fares; AC classes 5%, others exempt; not changed by 15/2025"
+6.1.03.3.2.02.0,bus/tram fare,0,0,administered,high,non-AC bus exempt; administered fares
+6.1.03.3.2.03.X,"taxi, auto-rickshaw fare",5,5,unchanged,medium,"cab 5% unchanged (only the with-ITC option rose 12->18, N15 8(vi)); metered autos exempt"
+6.1.03.3.2.04.0,rickshaw (hand drawn & cycle) fare,0,0,unchanged,medium,exempt passenger transport; not changed by 15/2025
+6.1.03.3.2.05.0,horse cart fare,0,0,unchanged,medium,exempt passenger transport; not changed by 15/2025
+6.1.03.3.2.06.0,"school bus, van, etc.",0,0,unchanged,low,student transport mostly exempt; review
+6.1.03.3.2.07.0,air fare (normal): economy class(adult),5,5,unchanged,high,"economy air 5% (11/2017 S.No.8, not amended); non-economy 12->18 (A-III)"
+6.1.03.3.2.08.0,"steamer, boat fare",5,5,unchanged,low,not changed by 15/2025
+6.1.03.3.2.09.0,porter charges,0,0,unchanged,low,mostly unregistered
+6.1.03.4.1.01.0,mobile handset,18,18,unchanged,high,phones 8517 18% N9 II/490; not in A-I
+6.1.03.5.2.01.0,telephone charges: landline*,18,18,unchanged,high,telecom 18%; not changed by 15/2025
+6.1.03.5.2.02.X,telephone charges: mobile,18,18,unchanged,high,telecom 18%; not changed by 15/2025
+6.1.03.5.2.03.0,internet expenses,18,18,unchanged,high,telecom 18%; not changed by 15/2025
+6.1.04.1.1.01.X,"radio, tape recorder, 2-in-1",18,18,unchanged,high,"radios 8527 N9 II/499, recorders 8519 N9 II/492 at 18%; not in A-I"
+6.1.04.1.1.02.0,television,28,18,mixed,low,TVs >32in 28->18 (A-I:8528; N9 II/500); TVs <=32in already 18% since 2019
+6.1.04.1.1.03.0,VCR/VCD/DVD player,18,18,unchanged,high,video players 8521 18% N9 II/493; not in A-I
+6.1.04.1.1.05.X,camera & photographic equipment,18,18,unchanged,high,"cameras 9006 N9 II/560, 8525 N9 II/497 at 18%; not in A-I"
+6.1.04.1.1.06.X,PC/ Laptop/ other peripherals incl. software,18,18,unchanged,high,computers 8471 18% N9 II/456; not in A-I
+6.1.04.1.1.07.0,"CD, DVD, audio/video cassette, etc",18,18,unchanged,high,recording media 8523 18% N9 II/495; not in A-I
+6.1.04.1.1.11.0,goods for recreation and hobbies,12,5,mixed,low,unspecified
+6.1.04.1.1.12.X,"sports goods, toys, etc.",12,5,mixed,low,"sports goods 12->5 (A-I:9506; N9 I/499), ride-on toys 12->5 (N9 I/497); other toys 18 unchanged"
+6.1.04.1.1.14.X,"newspapers, periodicals",0,0,exempt,high,newspapers nil N10/133
+6.1.04.1.2.04.0,photography,18,18,unchanged,low,service; not changed by 15/2025
+6.1.04.1.2.08.0,VCD/ DVD hire (incl. instrument),18,18,unchanged,low,service; not changed by 15/2025
+6.1.04.2.2.01.0,cinema: new release(normal day),18,18,mixed,low,tickets <=Rs100 12->5 (N15 34(ii)); >Rs100 18 unchanged
+6.1.04.2.2.02.0,monthly charges for cable TV connection,18,18,unchanged,high,broadcasting services 18%; not changed by 15/2025
+6.1.04.2.2.04.0,library charges,0,0,exempt,low,public libraries; review
+6.1.04.2.2.05.0,other entertainment,18,18,mixed,low,unspecified
+6.1.04.2.2.06.0,club fees,18,18,mixed,low,club membership 18 unchanged; gyms/fitness (Group 99972) 18->5 (N15 new S.No.35(i))
+6.1.04.2.2.07.0,hotel lodging charges,12,5,cut,high,hotel rooms <=Rs7500/day 12->5 without ITC (N15 7(i))
+6.1.05.1.1.02.X,"books, journals: first hand",0,0,exempt,high,printed books nil N10/132
+6.1.05.1.1.04.X,"stationery, photocopying charges",12,0,mixed,low,"notebooks 12->0 (N10/130), pencils 12->0 (N10/163), erasers 5->0 (N10/121); pens 18 (N9 II/626); photocopying 18"
+6.1.05.2.2.01.X,"tuition and other fees (school, college, etc.)",0,0,exempt,high,education services exempt (12/2017-CTR); not changed by 15/2025
+6.1.05.2.2.02.X,private tutor/ coaching centre,18,18,unchanged,medium,coaching 18%; not changed by 15/2025
+6.1.05.2.2.03.0,other educational expenses (incl. fees for enrollment in web-based training),18,18,mixed,low,unspecified
+6.1.06.1.1.01.0,toilet soap,18,5,cut,high,toilet soap 3401 N9 I/251; A-I:3401 18->5
+6.1.06.1.1.02.X,"toothpaste, toothbrush, comb, etc.",18,5,cut,medium,"toothpaste N9 I/246, toothbrush N9 I/504 18->5 (A-I:3306, 9603 21 00); combs 12->5 (A-I:9615)"
+6.1.06.1.1.03.X,"powder, snow, cream, lotion and perfume",18,5,mixed,low,talc/face powder 18->5 (A-I:3304); creams/lotions 18 (N9 II/61); perfume 18 (N9 II/60)
+6.1.06.1.1.04.X,"hair oil, shampoo, hair cream",18,5,cut,high,"hair oil, shampoo 3305 N9 I/245; A-I:3305 18->5 (hair cream 18 unchanged, N9 II/62)"
+6.1.06.1.1.05.X,"shaving blades, shaving stick, razor",18,18,unchanged,high,razors and blades 8212 18% N9 II/372; not in A-I (draft 18->5 wrong)
+6.1.06.1.1.06.X,"shaving cream, aftershave lotion",18,5,cut,high,shaving cream/lotion 3307 N9 I/249; A-I:3307 18->5
+6.1.06.1.1.07.0,sanitary napkins,0,0,unchanged,high,sanitary napkins nil N10/165
+6.1.06.1.1.09.X,"clock, watch",18,18,unchanged,high,watches/clocks 9101-9105 18% N9 II/583-587; not in A-I
+6.1.06.1.1.10.X,"suitcase, trunk, box, handbag and other travel goods",18,18,unchanged,medium,travel goods 4202 18% N9 II/145; cotton/jute bags 12->5 (A-I:4202 22) a small share
+6.1.06.1.1.11.X,"umbrella, raincoat",12,5,mixed,low,"umbrellas 12->5 (A-I:6601; N9 I/395); raincoats of plastic/rubber 18 (N9 II/127,141) or apparel slabs"
+6.1.06.1.1.12.X,lighter (bidi/ cigarette/ gas stove),18,18,unchanged,high,lighters 9613 18% N9 II/630; not in A-I
+6.1.06.1.1.14.X,any other personal goods,18,18,mixed,low,unspecified
+6.1.06.2.1.01.0,gold,3,3,unchanged,high,"gold 3% N9 IV/5,10"
+6.1.06.2.1.02.0,silver,3,3,unchanged,high,"silver 3% N9 IV/3,11"
+6.1.06.2.1.04.0,other ornaments,3,3,unchanged,high,"jewellery/imitation jewellery 3% N9 IV/10,14"
+6.1.06.3.2.01.X,"barber, beautician, etc.",18,5,cut,high,beauty and well-being Group 99972 18->5 without ITC (N15 new S.No.35(i))

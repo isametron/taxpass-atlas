@@ -1,0 +1,97 @@
+# Policy episodes. Tax shocks are stored as statutory rates (percent); the log tax
+# change dlog(1+tau) = ln((1 + new/100) / (1 + old/100)) is computed in src/config.py
+# so there is a single source of truth.
+#
+# Month conventions (all YYYY-MM):
+#   base_month    t0-1, the last fully untreated month
+#   event_month   t0, the first fully treated month
+#   partial_months  months with partially treated price collection; skipped
+#   pre_window    months used to fit the item's counterfactual (seasonal trend)
+#   exclude       list of [start, end] month ranges dropped from the pre_window
+#   horizons      h = 0..H, cumulative change from base_month to event_month + h
+#   headline_h    the horizon reported as the main estimate (average of h = 0..headline_h)
+
+japan_2019:
+  country: JP
+  event_date: 2019-10-01
+  base_month: 2019-09
+  event_month: 2019-10
+  partial_months: []
+  pre_window: [2017-09, 2019-08]
+  exclude: []
+  horizons: [0, 1, 2, 3]
+  headline_h: 2
+  cpi_base: 2020
+  tax_inclusive_display_required: false   # 総額表示 mandate only from 2021-04
+  direction: hike
+  rates:                                   # rate_class -> [old, new]
+    standard: [8, 10]
+    reduced: [8, 8]                        # food (ex eating-out, alcohol) and newspapers: control group
+  confounders:
+    - "Free preschool / childcare education (幼児教育・保育の無償化) from 2019-10: drop affected items."
+    - "Cashless point-rebate programme (2019-10 to 2020-06) is not in CPI prices; noted, not adjusted."
+
+singapore_2023:
+  country: SG
+  event_date: 2023-01-01
+  base_month: 2022-12
+  event_month: 2023-01
+  partial_months: []
+  pre_window: [2020-12, 2022-11]
+  exclude: []
+  horizons: [0, 1, 2, 3]
+  headline_h: 2
+  tax_inclusive_display_required: true     # GST-registered retailers must show GST-inclusive prices
+  direction: hike
+  rates:
+    standard: [7, 8]
+    exempt: [0, 0]                         # residential rent, financial services, precious metals: control group
+
+singapore_2024:
+  country: SG
+  event_date: 2024-01-01
+  base_month: 2023-12
+  event_month: 2024-01
+  partial_months: []
+  pre_window: [2021-12, 2023-11]
+  exclude: [[2022-12, 2023-04]]            # strip the 2023 step and its h = 0..3 response
+  horizons: [0, 1, 2, 3]
+  headline_h: 2
+  tax_inclusive_display_required: true
+  direction: hike
+  rates:
+    standard: [8, 9]
+    exempt: [0, 0]
+
+india_gst2:
+  country: IN
+  event_date: 2025-09-22
+  base_month: 2025-08
+  event_month: 2025-10
+  partial_months: [2025-09]                # cut took effect on the 22nd, mid-collection
+  pre_window: [2023-08, 2025-07]
+  exclude: []
+  horizons: [0, 1, 2]                      # 2012-base series ends 2025-12; longer horizons need the 2024-base link
+  headline_h: 2
+  cpi_base: 2012
+  tax_inclusive_display_required: true     # MRP regime: printed tax-inclusive maximum retail price
+  direction: cut
+  rates: per_item                          # item slabs come from concordances/india_gst2_slab_map.csv
+
+japan_2027:
+  country: JP
+  event_date: 2027-04-01
+  base_month: 2027-03
+  event_month: 2027-04
+  partial_months: []
+  pre_window: [2025-01, 2026-12]           # ends before Jan-Mar 2027 to keep anticipation effects out of drift
+  exclude: []
+  horizons: [0, 1, 2]
+  headline_h: 2
+  cpi_base: 2025
+  tax_inclusive_display_required: true
+  direction: cut
+  enacted: false                           # conditional forecast: bill not yet passed as of 2026-10-20
+  rates:
+    reduced_food: [8, 1]
+    standard: [10, 10]                     # eating-out stays at 10%: spillover only, rho undefined
