@@ -1,0 +1,7 @@
+test,forecast,n,crps,crps_weighted,mae,mae_weighted,coverage_50,coverage_90
+"National item m/m, 2025-01..2026-09 (percent)",Tokyo update (frozen rule),11707,0.687299,0.687299,0.855341,0.855341,0.645682,0.885026
+"National item m/m, 2025-01..2026-09 (percent)",seasonal prior only,11707,1.164834,1.164834,1.437665,1.437665,0.649184,0.880584
+"National item m/m, 2025-01..2026-09 (percent)",Tokyo reading as-is,11707,0.931658,0.931658,1.139645,1.139645,0.684462,0.907491
+"National rho, Oct 2019 (prior excludes Japan 2019)",Tokyo update (frozen rule),316,0.448316,0.325784,0.552631,0.419406,0.626582,0.908228
+"National rho, Oct 2019 (prior excludes Japan 2019)",prior only,316,0.608232,0.443821,0.791657,0.584808,0.775316,0.990506
+"National rho, Oct 2019 (prior excludes Japan 2019)",Tokyo reading as-is,316,0.597569,0.439127,0.752154,0.566190,0.617089,0.879747

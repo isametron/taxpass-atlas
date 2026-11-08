@@ -25,6 +25,20 @@ python -m src.panel                   # estimation panels, one per episode
 ```
 Raw downloads go to `data/raw/` and are git-ignored. Their URLs and SHA-256 hashes are recorded in `data/raw/MANIFEST.json`, which is committed.
 
+## Estimates
+```bash
+python -m src.passthrough.run         # item, category and overall estimates in reports/estimates/
+python -m src.report.figures          # figures in reports/figures/
+```
+
+## Model, backtests and forecast
+```bash
+python -m src.backtest.cross_episode  # leave-one-episode-out scores against baselines
+python -m src.backtest.tokyo_national # Tokyo-to-National updating rule
+python -m src.backtest.injection      # fake-shock test of the 2027 extraction formula
+python -m src.forecast.japan_2027 --lock   # forecast files and hash manifest
+```
+
 ## Tests
 ```bash
 python -m pytest

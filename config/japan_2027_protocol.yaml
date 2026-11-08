@@ -1,0 +1,46 @@
+# Pre-specified protocol for scoring the Japan April 2027 food tax forecast.
+# Hashed together with the forecast. Nothing here may change after the lock.
+
+version: 1
+status: conditional forecast. The bill passed the Lower House on 2026-11-06 and was not yet law when this was written.
+
+event:
+  statutory_change: reduced food rate 8% -> 1%, effective 2027-04-01
+  if_enacted_terms_differ: >
+    The forecast target is rho, the share passed through, so the forecast still stands.
+    Scoring uses dlog(1+tau) of the enacted rate. If the effective month differs, every
+    window below moves with it. If the cut is not enacted, the forecast is void and unscored.
+
+series:
+  cpi: e-Stat statsDataId 0004052037, 2025 base, tab 1 (index), monthly
+  national_area: "00000"
+  tokyo_area: "13100"
+  cost_control: BOJ PRCG20_1200120001, CGPI beverages and foods EXCLUDING consumption tax
+
+targets:
+  items: 2025-base items with rate_class reduced_food and no administered flag in concordances/japan_rate_flags.csv
+  excluded: school lunch (administered); newspapers (2027 rate not legislated; reported separately, never scored)
+  spillover_items: standard-rate eating-out items, for which rho is undefined; forecast is a log change
+
+extraction:
+  formula: "rho_i = [mean over h=0,1,2 of (log p_i(2027-04+h) - log p_i(2027-03)) - trend_i - cost_i] / dlog(1+tau)"
+  base_month: 2027-03
+  outcome_months: [2027-04, 2027-05, 2027-06]
+  trend_i: sum over outcome-window months of item i's month-of-year mean monthly log change, 2025-01 to 2026-12
+  trend_window_reason: Jan-Mar 2027 excluded because shoppers and retailers may already react to the cut
+  cost_i: pooled beta (pre-window OLS of item surprises on CGPI surprises) x cumulative CGPI surprise
+  difference_in_differences: none
+  anticipation_report: Jan-Mar 2027 deviations are reported separately and never enter a score
+
+tokyo_update:
+  rule: "posterior_mean = mu + k (rho_tokyo - mu); k = sd^2 / (sd^2 + tokyo_noise_sd^2); posterior_var = sd^2 tokyo_noise_sd^2 / (sd^2 + tokyo_noise_sd^2)"
+  inputs: rho_mu, rho_sd and tokyo_noise_sd from the locked forecast; rho_tokyo from the extraction on area 13100
+  timing: Tokyo readings update the National forecast only for months where the National print is not yet out
+
+scoring:
+  observed_rho: extraction on National data, one value per item
+  predictive_for_observed: N(rho_mu, rho_sd^2 + extraction_se^2)
+  metrics: CRPS (mean, and precision-weighted with weights floored at the median item), MAE, 50% and 90% coverage
+  baselines: full pass-through (rho=1) and no pass-through (rho=0)
+  aggregates: National headline and core CPI effect in percentage points, using 2025-base weights
+  release_schedule: Tokyo April 2027 in late April 2027; National April 2027 in May 2027; final score after June 2027 National

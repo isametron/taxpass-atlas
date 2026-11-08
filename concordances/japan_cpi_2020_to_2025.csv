@@ -410,8 +410,8 @@ code_2025,name_2025,code_2020,name_2020,relation,level,note
 1930,果実ジュース,1930,果実ジュース,identity,item,
 1931,果汁入り飲料,1931,果汁入り飲料,identity,item,
 1941,野菜ジュース,1941,野菜ジュース,identity,item,
-1951,炭酸飲料Ａ,1951,炭酸飲料,renamed,item,"炭酸飲料 split into 炭酸飲料Ａ/Ｂ; link to Ａ, check overlap"
-1952,炭酸飲料Ｃ,1952,ノンアルコールビール,renamed,item,ノンアルコールビール relabelled 炭酸飲料Ｃ; check overlap before linking
+1951,炭酸飲料Ａ,1951,炭酸飲料,renamed,item,"炭酸飲料 -> 炭酸飲料Ａ; overlap corr 0.994, same series"
+1952,炭酸飲料Ｃ,1952,ノンアルコールビール,renamed,item,"ノンアルコールビール relabelled 炭酸飲料Ｃ; overlap corr 0.999, same series"
 1953,炭酸飲料Ｂ,,,new,item,
 1972,乳酸菌飲料,1972,乳酸菌飲料,identity,item,
 1981,スポーツドリンク,1981,スポーツドリンク,identity,item,
@@ -602,7 +602,7 @@ code_2025,name_2025,code_2020,name_2020,relation,level,note
 6051,皮膚病薬,6051,皮膚病薬,identity,item,
 6061,はり薬,6061,はり薬,identity,item,
 6062,目薬,6062,目薬,identity,item,
-6090,サプリメント,6090,健康保持用摂取品Ａ,renamed,item,"健康保持用摂取品Ａ relabelled サプリメント; supplements are 食品, so reduced-rate (outside the food subtree)"
+6090,サプリメント,6090,健康保持用摂取品Ａ,renamed,item,"健康保持用摂取品Ａ relabelled サプリメント (食品, reduced rate); overlap corr 1.000"
 6091,漢方薬,6091,漢方薬,identity,item,
 ,,6094,健康保持用摂取品Ｂ,dropped,item,
 6095,入浴剤,6095,入浴剤,identity,item,

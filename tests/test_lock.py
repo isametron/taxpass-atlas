@@ -48,3 +48,42 @@ def test_code_tree_hash_ignores_line_endings(tmp_path):
 def test_manifest_is_written_with_lf_only(tmp_path):
     _, path, _ = _make_locked(tmp_path)
     assert b"\r\n" not in path.read_bytes()
+
+
+class _FakeCalendar:
+    calls = 0
+
+    def __init__(self, url):
+        self.url = url
+
+    def submit(self, msg, timeout=None):
+        from opentimestamps.core.notary import PendingAttestation
+        from opentimestamps.core.timestamp import Timestamp
+        if "down" in self.url:
+            raise OSError("calendar unavailable")
+        _FakeCalendar.calls += 1
+        ts = Timestamp(msg)
+        ts.attestations.add(PendingAttestation(self.url))
+        return ts
+
+
+def test_ots_stamp_writes_receipt_for_the_file_hash(tmp_path):
+    from opentimestamps.core.op import OpSHA256
+    from opentimestamps.core.serialize import StreamDeserializationContext
+    from opentimestamps.core.timestamp import DetachedTimestampFile
+    f = tmp_path / "m.json"
+    f.write_bytes(b"{}\n")
+    out = lock.ots_stamp(f, _FakeCalendar, ("https://a", "https://b", "https://down"))
+    with open(out, "rb") as fh:
+        stamp = DetachedTimestampFile.deserialize(StreamDeserializationContext(fh))
+    assert isinstance(stamp.file_hash_op, OpSHA256)
+    assert stamp.file_digest.hex() == lock.sha256_file(f)
+
+
+def test_ots_stamp_needs_two_calendars(tmp_path):
+    import pytest
+    f = tmp_path / "m.json"
+    f.write_bytes(b"{}\n")
+    with pytest.raises(RuntimeError, match="only 1 calendars"):
+        lock.ots_stamp(f, _FakeCalendar, ("https://a", "https://down", "https://down2"))
+    assert not (tmp_path / "m.json.ots").exists()

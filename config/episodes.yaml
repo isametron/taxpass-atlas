@@ -8,6 +8,8 @@
 #   partial_months  months with partially treated price collection; skipped
 #   pre_window    months used to fit the item's counterfactual (seasonal trend)
 #   exclude       list of [start, end] month ranges dropped from the pre_window
+#   history_start   first month kept in the panel; earlier months feed the placebo dates
+#   placebo_exclude month ranges a placebo window may not touch (other tax events)
 #   horizons      h = 0..H, cumulative change from base_month to event_month + h
 #   headline_h    the horizon reported as the main estimate (average of h = 0..headline_h)
 
@@ -19,6 +21,8 @@ japan_2019:
   partial_months: []
   pre_window: [2017-09, 2019-08]
   exclude: []
+  history_start: 2015-01
+  placebo_exclude: []
   horizons: [0, 1, 2, 3]
   headline_h: 2
   cpi_base: 2020
@@ -39,6 +43,8 @@ singapore_2023:
   partial_months: []
   pre_window: [2020-12, 2022-11]
   exclude: []
+  history_start: 2015-01
+  placebo_exclude: []
   horizons: [0, 1, 2, 3]
   headline_h: 2
   tax_inclusive_display_required: true     # GST-registered retailers must show GST-inclusive prices
@@ -55,6 +61,8 @@ singapore_2024:
   partial_months: []
   pre_window: [2021-12, 2023-11]
   exclude: [[2022-12, 2023-04]]            # strip the 2023 step and its h = 0..3 response
+  history_start: 2015-01
+  placebo_exclude: [[2022-12, 2023-12]]
   horizons: [0, 1, 2, 3]
   headline_h: 2
   tax_inclusive_display_required: true
@@ -71,6 +79,8 @@ india_gst2:
   partial_months: [2025-09]                # cut took effect on the 22nd, mid-collection
   pre_window: [2023-08, 2025-07]
   exclude: []
+  history_start: 2014-01
+  placebo_exclude: [[2017-06, 2018-01]]   # GST rollout, July 2017
   horizons: [0, 1, 2]                      # 2012-base series ends 2025-12; longer horizons need the 2024-base link
   headline_h: 2
   cpi_base: 2012

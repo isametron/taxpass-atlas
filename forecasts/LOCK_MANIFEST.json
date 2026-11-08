@@ -1,0 +1,17 @@
+{
+  "code_tree_sha256": "4a87d088f52cb58b1bebaa7cec3ef27d165461eace45efad21fc0db47b74ee1d",
+  "created_utc": "2026-11-08T13:26:51Z",
+  "files": {
+    "config/japan_2027_protocol.yaml": "98f9491bfb85d72560ad79a2919a7ee866bc1651d7791ad0c81571084340d4da",
+    "forecasts/japan_2027_aggregates.csv": "c824e153136041ab00f4c400330915044816f0bdb4f85fec942609a8d25ede88",
+    "forecasts/japan_2027_locked_forecast.csv": "d03204093bb6aa22332980a538e533b026fc76d98a5746b5e62605c1ea7a66af",
+    "forecasts/japan_2027_spillover_forecast.csv": "30c6fe5c122b0248530becdf77d8acf8d5ad3f17b8b0a95cd1fd9b1940e14b47"
+  },
+  "input_data_manifest_sha256": "8edb9298b3f3c3ca43e92a77c3d88cb1dd516c883bfa6eb17d678e13a8c73b9a",
+  "manifest_version": 1,
+  "model": {
+    "sigma": 0.4507491901344155,
+    "tau": 0.4496097214648907
+  },
+  "requirements_lock_sha256": "b5643fb171695dfaf2b598994d345b05e2c92f2f4350bf079b97d322d9b9bf92"
+}

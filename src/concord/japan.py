@@ -33,13 +33,13 @@ _ITEM_COLS = (6, 7, 8, 9)
 _FIRST_DATA_ROW = 7
 
 
-# Renamed food/beverage rows where the wording change is more than 男子用→男性用 style.
-# These are in the 2027 target set, so the link is checked against the 2025-26 overlap
-# of both bases before 2019 estimates are transferred.
+# Renamed rows where the wording change is more than 男子用→男性用 style. Each was checked
+# against the 2025-01..2026-09 overlap of both bases (month-on-month log changes), so
+# 2019 estimates on the 2020 code transfer to the 2025 code.
 _REVIEWED_RENAMES = {
-    "1951": "炭酸飲料 split into 炭酸飲料Ａ/Ｂ; link to Ａ, check overlap",
-    "1952": "ノンアルコールビール relabelled 炭酸飲料Ｃ; check overlap before linking",
-    "6090": "健康保持用摂取品Ａ relabelled サプリメント; supplements are 食品, so reduced-rate (outside the food subtree)",
+    "1951": "炭酸飲料 -> 炭酸飲料Ａ; overlap corr 0.994, same series",
+    "1952": "ノンアルコールビール relabelled 炭酸飲料Ｃ; overlap corr 0.999, same series",
+    "6090": "健康保持用摂取品Ａ relabelled サプリメント (食品, reduced rate); overlap corr 1.000",
 }
 
 
@@ -118,7 +118,7 @@ NEWSPAPERS = {"9204", "9205"}
 # Eat-in items often bought as takeout (8%); the CPI item may mix both rates.
 MIXED_TAKEOUT = {"2135", "2136", "2161", "2162", "2163", "2164", "2165"}
 
-# Non-taxable (非課税) under the Consumption Tax Act: controls in 2019, never targets.
+# Non-taxable (非課税) under the Consumption Tax Act: never targets, and not used as 2019 controls.
 EXEMPT = {
     "3000": "residential rent", "3016": "residential rent", "3017": "residential rent",
     "3030": "imputed rent (no transaction)", "3180": "insurance premium",

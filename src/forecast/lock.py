@@ -15,8 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-import shutil
-import subprocess
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -82,10 +81,40 @@ def verify_manifest(path: Path, root: Path = ROOT) -> list[str]:
     return problems
 
 
-def ots_stamp(path: Path) -> Path:
-    """Submit `path`'s hash to OpenTimestamps calendars; returns the .ots receipt path."""
-    exe = shutil.which("ots")
-    if exe is None:
-        raise RuntimeError("`ots` not found; install opentimestamps-client in the active environment")
-    subprocess.run([exe, "stamp", str(path)], check=True)
-    return path.with_name(path.name + ".ots")
+CALENDARS = ("https://alice.btc.calendar.opentimestamps.org",
+             "https://bob.btc.calendar.opentimestamps.org",
+             "https://finney.calendar.eternitywall.com")
+MIN_CALENDARS = 2
+
+
+def ots_stamp(path: Path, calendar_cls=None, calendars: tuple[str, ...] = CALENDARS, timeout: int = 30) -> Path:
+    """Submit a salted hash of `path` to OpenTimestamps calendars; returns the .ots receipt path.
+
+    Uses the opentimestamps library directly because the `ots` command crashes at import on
+    Windows (python-bitcoinlib looks for an OpenSSL DLL that is absent). The receipt format is
+    the same, so `ots upgrade` and `ots verify` work on it from any machine with a working client.
+    """
+    from opentimestamps.calendar import RemoteCalendar
+    from opentimestamps.core.op import OpAppend, OpSHA256
+    from opentimestamps.core.serialize import StreamSerializationContext
+    from opentimestamps.core.timestamp import DetachedTimestampFile
+
+    calendar_cls = calendar_cls or RemoteCalendar
+    with open(path, "rb") as f:
+        stamp = DetachedTimestampFile.from_fd(OpSHA256(), f)
+    salted = stamp.timestamp.ops.add(OpAppend(os.urandom(16)))
+    tip = salted.ops.add(OpSHA256())
+    accepted = 0
+    errors = []
+    for url in calendars:
+        try:
+            tip.merge(calendar_cls(url).submit(tip.msg, timeout=timeout))
+            accepted += 1
+        except Exception as e:  # a calendar being down is expected; the threshold below decides
+            errors.append(f"{url}: {type(e).__name__}")
+    if accepted < MIN_CALENDARS:
+        raise RuntimeError(f"only {accepted} calendars accepted the stamp: {errors}")
+    out = path.with_name(path.name + ".ots")
+    with open(out, "wb") as f:
+        stamp.serialize(StreamSerializationContext(f))
+    return out

@@ -26,7 +26,7 @@ def test_excluded_months_do_not_count_against_coverage():
     assert set(panel.complete_items(_toy({"x": pre + post}), "singapore_2024", 1.0).item_id) == {"x"}
 
 
-@pytest.mark.parametrize("ep", ["singapore_2023", "singapore_2024"])
+@pytest.mark.parametrize("ep", ["singapore_2023", "singapore_2024", "japan_2019", "india_gst2"])
 def test_built_panel_schema(ep):
     path = DATA_PROCESSED / f"panel_{ep}.parquet"
     if not path.exists():
@@ -35,5 +35,26 @@ def test_built_panel_schema(ep):
     assert list(df.columns) == panel.COLUMNS
     assert set(df.role) <= {"treated", "control", "excluded"}
     assert (df.loc[df.role != "treated", "dlog_tax"] == 0).all()
-    assert (df.loc[df.role == "treated", "dlog_tax"] > 0).all()
+    assert (df.loc[df.role == "treated", "dlog_tax"] != 0).all()
     assert not df.duplicated(["item_id", "month"]).any()
+
+
+def test_india_name_matching_handles_renames_and_reports_gaps():
+    slabs = pd.DataFrame([
+        {"item_code": "A", "item_desc": "rice – PDS", "rate_old": 0, "rate_new": 0, "status": "administered", "confidence": "high"},
+        {"item_code": "1.1.07.3.1.09.0", "item_desc": "peas", "rate_old": 0, "rate_new": 0, "status": "unchanged", "confidence": "high"},
+        {"item_code": "1.1.08.1.1.07.0", "item_desc": "peas", "rate_old": 0, "rate_new": 0, "status": "unchanged", "confidence": "high"},
+    ])
+    out = panel.india_slabs_by_api_name(["Rice - PDS", "Peas (pulses)"], slabs)
+    assert out.item_code.tolist() == ["A", "1.1.08.1.1.07.0"]
+    with pytest.raises(ValueError, match="Unknown item"):
+        panel.india_slabs_by_api_name(["Unknown item"], slabs)
+
+
+@pytest.mark.parametrize("status,confidence,role", [
+    ("cut", "high", "treated"), ("hike", "medium", "treated"), ("unchanged", "high", "control"),
+    ("exempt", "high", "control"), ("cut", "low", "excluded"), ("unchanged", "low", "excluded"),
+    ("mixed", "high", "excluded"), ("administered", "high", "excluded"),
+])
+def test_india_role_rules(status, confidence, role):
+    assert panel.india_role(status, confidence)[0] == role

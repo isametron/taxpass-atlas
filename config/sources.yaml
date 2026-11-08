@@ -8,22 +8,23 @@ japan:
   cpi_2015_base: "0003143513"            # fallback if the 2020-base table lacks 2017-19 item data
   retail_price_survey:
     stats_code: "00200571"               # 小売物価統計調査; 主要品目の都市別小売価格, monthly from 2000-01
-    stats_data_id: null                  # TODO: `python -m src.fetch.estat discover --stats-code 00200571`
+    stats_data_id: "0003421913"          # 主要品目の都市別小売価格 (2000-01 onward), found via discover
     # Item and city coverage was revised from 2025-01; charm-pricing features use 2017-2024 prices.
   codelist_url: https://www.e-stat.go.jp/api/sites/default/files/2026-07/2025DBcode.xlsx
   area:
     national: "00000"
     tokyo_ward_2025: "13100"
     tokyo_ward_2020: "13A01"
-  # BOJ Corporate Goods Price Index (Producer Price Index, 2020 base) for cost controls.
+  # BOJ Corporate Goods Price Index, 2020 base, EXCLUDING consumption tax. The tax-inclusive
+  # series (PRCG20_22...) jumps +1.09% in Oct 2019 and would absorb the tax shock being measured.
   cgpi:
     api: https://www.stat-search.boj.or.jp/api/v1/getDataCode
     db: PR01
     start: "201501"
     series:
-      all_commodities: PRCG20_2200000000
-      beverages_and_foods: PRCG20_2200120001   # linked back to 1960; used for both episodes
-      foods: PRCG20_2200130001                 # 2020 base only, from 2020-01
+      all_commodities: PRCG20_1200000000
+      beverages_and_foods: PRCG20_1200120001   # from 1985; used for both episodes
+      foods: PRCG20_1200130001                 # 2020 base only, from 2020-01
 
 singapore:
   tablebuilder_api: https://tablebuilder.singstat.gov.sg/api/table/tabledata
@@ -36,7 +37,8 @@ singapore:
 india:
   mospi_api: https://api.mospi.gov.in/api
   endpoints:
-    login: /login                        # POST {email, password} -> token (15 min)
+    signup: /users/usersignup            # POST {username, email, password, organization, purpose}
+    login: /users/login                  # POST {email, password} -> token (15 min); manual's /login is 404
     item_index: /cpi/getItemIndex        # all-India item indices, base 2012, 2014-01..2025-12
     group_index: /cpi/getCPIIndex        # group/subgroup indices
   unauthenticated_record_limit: 10       # without a token the API returns only 10 records

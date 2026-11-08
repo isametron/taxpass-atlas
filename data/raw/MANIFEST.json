@@ -1,4 +1,13 @@
 {
+  "data/raw/india/cpi_item_index_2012.json": {
+    "bytes": 5973059,
+    "fetched_utc": "2026-11-08T12:10:36Z",
+    "params": {
+      "years": "2014-2025"
+    },
+    "sha256": "199420986b3238cf90c1d19363830b01614b500927fe865b4311fe27317be5b3",
+    "url": "https://api.mospi.gov.in/api/cpi/getItemIndex"
+  },
   "data/raw/india/cpi_metadata.xlsx": {
     "bytes": 34619,
     "fetched_utc": "2026-10-19T21:46:23Z",
@@ -21,17 +30,57 @@
     "url": "https://www.e-stat.go.jp/api/sites/default/files/2026-07/2025DBcode.xlsx"
   },
   "data/raw/japan/boj_cgpi.json": {
-    "bytes": 7236,
-    "fetched_utc": "2026-10-20T16:16:56Z",
+    "bytes": 7339,
+    "fetched_utc": "2026-11-08T12:39:47Z",
     "params": {
-      "code": "PRCG20_2200000000,PRCG20_2200120001,PRCG20_2200130001",
+      "code": "PRCG20_1200000000,PRCG20_1200120001,PRCG20_1200130001",
       "db": "PR01",
       "format": "json",
       "lang": "en",
       "startDate": "201501"
     },
-    "sha256": "085a8c920767690d9107aa6270aacb5e19e4799cf033d920a84a30be7dc5d231",
+    "sha256": "a6419f333269cc590a64cfb42b84cc5ac0f7c136ca7d0f4d87f6f588b1ddf54e",
     "url": "https://www.stat-search.boj.or.jp/api/v1/getDataCode"
+  },
+  "data/raw/japan/cpi2020.json": {
+    "bytes": 21988424,
+    "fetched_utc": "2026-11-07T21:29:41Z",
+    "params": {
+      "cdArea": "00000,13A01",
+      "cdTab": "1",
+      "cdTimeFrom": "2015000101",
+      "statsDataId": "0003427113"
+    },
+    "sha256": "547cb2ba18868b6c711395feda64e1f12aa69915c4b8f19fc428976e4cc9316e",
+    "url": "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
+  },
+  "data/raw/japan/cpi2025.json": {
+    "bytes": 264184694,
+    "fetched_utc": "2026-11-07T21:27:42Z",
+    "params": {
+      "cdArea": "00000,13100",
+      "statsDataId": "0004052037"
+    },
+    "sha256": "c399b00e080d8ad9cc31b2eb7c5925fb5ee33cb7e13d43a912b3e93675901015",
+    "url": "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
+  },
+  "data/raw/japan/cpi2025_item_info.xlsx": {
+    "bytes": 170475,
+    "fetched_utc": "2026-11-08T13:18:18Z",
+    "params": {},
+    "sha256": "db84292809db50087ceda54bd562c2433e050f9017e3122287d4d477c2065df5",
+    "url": "https://www.stat.go.jp/data/cpi/2025/kaisetsu/zuhyou/4-1.xlsx"
+  },
+  "data/raw/japan/retail.json": {
+    "bytes": 8016767,
+    "fetched_utc": "2026-11-08T13:18:31Z",
+    "params": {
+      "cdArea": "13100",
+      "cdTimeFrom": "2017000101",
+      "statsDataId": "0003421913"
+    },
+    "sha256": "b1b9d510990e9d910db1f693b8913120e74d43a18c4bb7bc5859e5bf7e3ccc8b",
+    "url": "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
   },
   "data/raw/singapore/M213751.json": {
     "bytes": 857033,

@@ -70,3 +70,37 @@ def test_singapore_flags_cover_controls():
     d = pd.read_csv(SG, dtype=str)
     assert d.series_no.is_unique
     assert {"exempt", "gst_absorbed", "standard"} == set(d.gst_status)
+
+
+CLASSES_2025 = CONCORDANCES.parent / "data" / "processed" / "japan_cpi2025_classes.parquet"
+
+
+@pytest.mark.skipif(not CLASSES_2025.exists(), reason="run `python -m src.fetch.estat cpi2025` first")
+def test_rate_flags_match_estat_hierarchy(rates):
+    cat = pd.read_parquet(CLASSES_2025).query("class_id == 'cat01'").set_index("code")
+    parent = cat.parent.to_dict()
+    name = cat.name.str.split(" ", n=1).str[-1].to_dict()
+
+    def ancestors(code):
+        out = []
+        while isinstance(parent.get(code), str) and parent[code]:
+            code = parent[code]
+            out.append(name.get(code))
+        return out
+
+    items = cat.index[cat.level == "6"]
+    assert set(items) == set(rates.code_2025)
+    r = rates.set_index("code_2025").rate_class
+    deliberate = {"2144", "2182", "2183", "6090", "6096"}  # see REDUCED_OUTSIDE_FOOD in src/concord/japan.py
+    for code in items:
+        anc = ancestors(code)
+        if "酒類" in anc:
+            expected = "standard_alcohol"
+        elif "外食" in anc:
+            expected = "standard_eating_out"
+        elif "食料" in anc:
+            expected = "reduced_food"
+        else:
+            continue
+        assert r[code] == expected or code in deliberate, (code, name[code], r[code])
+    assert all(r[c] == "reduced_food" for c in deliberate)

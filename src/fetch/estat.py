@@ -5,6 +5,7 @@ Commands:
   python -m src.fetch.estat discover --stats-code 00200571   list Retail Price Survey tables
   python -m src.fetch.estat cpi2025             2025-base, national + Tokyo ward-area
   python -m src.fetch.estat cpi2020             2020-base, national + Tokyo ward-area
+  python -m src.fetch.estat retail              Retail Price Survey, Tokyo ward-area prices
   python -m src.fetch.estat cpi2025 --offline   parse data/raw only
 
 Raw pages are saved as returned (minus the appId) and recorded in data/raw/MANIFEST.json.
@@ -82,15 +83,23 @@ def _as_list(x):
     return x if isinstance(x, list) else [x]
 
 
+def is_monthly(code: str) -> bool:
+    """Monthly codes are 'YYYY00MMMM'; annual ('YYYY000000'), fiscal-year ('YYYY100000')
+    and quarterly codes share the table and are skipped."""
+    return len(code) == 10 and code[4:6] == "00" and code[6:8] == code[8:10] and "01" <= code[6:8] <= "12"
+
+
 def parse_time(code: str) -> str:
     """e-Stat monthly time code 'YYYY00MMMM' (e.g. '2019001010') -> 'YYYY-MM'."""
-    if len(code) != 10 or code[4:6] != "00" or code[6:8] != code[8:10] or not "01" <= code[6:8] <= "12":
+    if not is_monthly(code):
         raise ValueError(f"not a monthly e-Stat time code: {code}")
     return f"{code[:4]}-{code[6:8]}"
 
 
 def tidy(pages: list[dict]) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Return (values, classes). values: tab, item_code, area, month, value."""
+    """Return (values, classes). values: tab, item_code, area, month, value (monthly only).
+
+    Tab '1' is the index level (指数); '2' and '3' are percentage changes."""
     first = pages[0]["GET_STATS_DATA"]["STATISTICAL_DATA"]
     classes = []
     for obj in _as_list(first["CLASS_INF"]["CLASS_OBJ"]):
@@ -103,13 +112,15 @@ def tidy(pages: list[dict]) -> tuple[pd.DataFrame, pd.DataFrame]:
     rows = []
     for page in pages:
         for v in _as_list(page["GET_STATS_DATA"]["STATISTICAL_DATA"]["DATA_INF"]["VALUE"]):
+            if not is_monthly(v["@time"]):
+                continue
             val = v.get("$")
             try:
                 val = float(val)
             except (TypeError, ValueError):
                 continue  # '-', '***', '…' mark missing or confidential cells
             rows.append({
-                "tab": v.get("@tab"), "item_code": v.get("@cat01"), "area": v.get("@area"),
+                "tab": v.get("@tab"), "item_code": v.get("@cat02", v.get("@cat01")), "area": v.get("@area"),
                 "month": parse_time(v["@time"]), "value": val,
             })
     return pd.DataFrame(rows), pd.DataFrame(classes)
@@ -117,7 +128,7 @@ def tidy(pages: list[dict]) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("what", choices=["discover", "cpi2025", "cpi2020"])
+    ap.add_argument("what", choices=["discover", "cpi2025", "cpi2020", "retail"])
     ap.add_argument("--offline", action="store_true")
     ap.add_argument("--stats-code", default=sources()["japan"]["stats_code"])
     args = ap.parse_args()
@@ -128,16 +139,19 @@ def main() -> None:
         print(df.to_string(max_colwidth=70))
         return
 
-    if args.what == "cpi2025":
+    if args.what == "retail":
+        table_id = cfg["retail_price_survey"]["stats_data_id"]
+        filters = {"cdArea": cfg["area"]["tokyo_ward_2025"], "cdTimeFrom": "2017000101"}
+    elif args.what == "cpi2025":
         table_id = cfg["cpi_2025_base"]
         areas = [cfg["area"]["national"], cfg["area"]["tokyo_ward_2025"]]
-        filters = {"cdArea": ",".join(areas)}
+        filters = {"cdArea": ",".join(areas), "cdTab": "1", "cdTimeFrom": "2015000101"}
     else:
         table_id = cfg["cpi_2020_base"]
         if not table_id:
             raise SystemExit("cpi_2020_base is not set in config/sources.yaml; run `discover` first.")
         areas = [cfg["area"]["national"], cfg["area"]["tokyo_ward_2020"]]
-        filters = {"cdArea": ",".join(areas), "cdTimeFrom": "2016000101"}
+        filters = {"cdArea": ",".join(areas), "cdTab": "1", "cdTimeFrom": "2015000101"}
 
     if args.offline:
         pages = json.loads((RAW_DIR / f"{args.what}.json").read_text(encoding="utf-8"))
