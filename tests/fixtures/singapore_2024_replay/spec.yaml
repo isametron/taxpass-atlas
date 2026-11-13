@@ -1,0 +1,19 @@
+name: singapore_2024
+description: Singapore GST 8% -> 9%, Jan 2024; forecast fit without Singapore 2024
+base_month: 2023-12
+event_month: 2024-01
+horizons:
+- 0
+- 1
+- 2
+- 3
+headline_h: 2
+pre_window:
+- 2021-12
+- 2023-11
+exclude:
+- - 2022-12
+  - 2023-04
+dlog_tax: 0.0092166551
+cost_series: null
+placebo_dates: 67

@@ -1,0 +1,18 @@
+name: japan_2019
+description: Japan consumption tax 8% -> 10%, Oct 2019, standard-rate items; forecast
+  fit without Japan 2019
+base_month: 2019-09
+event_month: 2019-10
+horizons:
+- 0
+- 1
+- 2
+- 3
+headline_h: 2
+pre_window:
+- 2017-09
+- 2019-08
+exclude: []
+dlog_tax: 0.0183491387
+cost_series: all_commodities
+placebo_dates: 29

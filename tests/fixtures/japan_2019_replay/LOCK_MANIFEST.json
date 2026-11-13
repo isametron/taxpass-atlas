@@ -1,0 +1,10 @@
+{
+  "code_tree_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "created_utc": "2026-11-13T19:01:02Z",
+  "files": {
+    "forecast.csv": "c275bf6890b278cd3ac01fc707b4f242d5a15ddcd30b45116c6b82f805745e44",
+    "spec.yaml": "cb55417c906ecf73e694107cd632b3c200ac3e67f6e7e82cc83b438b4c733337"
+  },
+  "manifest_version": 1,
+  "replay_of": "japan_2019"
+}

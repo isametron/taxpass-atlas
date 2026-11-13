@@ -1,0 +1,4 @@
+section,forecast,n,crps,crps_weighted,mae,mae_weighted,coverage_50,coverage_90,skill_vs_rho=1,skill_weighted_vs_rho=1,skill_vs_rho=0,skill_weighted_vs_rho=0
+"items, national rho",locked forecast,316,0.628500,0.468155,0.840888,0.647776,0.689873,0.990506,-0.200910,-0.416384,0.334062,0.481175
+"items, national rho",full pass-through (rho=1),316,0.523353,0.330528,0.677996,0.418182,0.401899,0.686709,,,,
+"items, national rho",no pass-through (rho=0),316,0.943782,0.902338,1.138972,1.035427,0.221519,0.386076,,,,

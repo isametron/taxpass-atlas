@@ -1,0 +1,4 @@
+section,forecast,n,crps,crps_weighted,mae,mae_weighted,coverage_50,coverage_90,skill_vs_rho=1,skill_weighted_vs_rho=1,skill_vs_rho=0,skill_weighted_vs_rho=0
+"items, tokyo rho",locked forecast,316,0.882454,0.628204,1.160542,0.850701,0.664557,0.930380,-0.116750,-0.223727,0.210462,0.349584
+"items, tokyo rho",full pass-through (rho=1),316,0.790198,0.513353,1.011506,0.641780,0.531646,0.768987,,,,
+"items, tokyo rho",no pass-through (rho=0),316,1.117683,0.965849,1.412353,1.187994,0.310127,0.575949,,,,

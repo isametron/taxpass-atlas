@@ -8,3 +8,4 @@
 forecasts/** -text
 config/japan_2027_protocol.yaml -text
 data/raw/MANIFEST.json -text
+tests/fixtures/** -text

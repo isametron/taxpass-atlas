@@ -1,0 +1,10 @@
+{
+  "code_tree_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "created_utc": "2026-11-13T19:01:03Z",
+  "files": {
+    "forecast.csv": "3f827b2aba166dbdc94574a08b0a24cd8379d52b065305346a1464806e2776a8",
+    "spec.yaml": "91dcfe6d70458971fc4a968f346d161aa3092f6b56e4559969536eecc3d8ed0e"
+  },
+  "manifest_version": 1,
+  "replay_of": "singapore_2024"
+}
